@@ -81,6 +81,7 @@ body {
     width: 6px;
     border-radius: 50%;
     background-color: var(--font-color-dark);
+    transition: ease-in-out 0.1s;
 }
 
 #scroollbar a:hover {
@@ -89,6 +90,7 @@ body {
 
 #scroollbar a.select {
     background-color: var(--font-color-light);
+    transition: ease-in-out 0.1s;
 }
 
 a {
@@ -657,6 +659,27 @@ button#projectsButton div {
 
 #text {
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#text div {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#text div a {
+    color: var(--font-color-dark);
+    transition: ease-in-out 0.2s;
+}
+
+#text div a:hover {
+    color: var(--font-color-light);
+    transition: ease-in-out 0.2s;
 }
 
 #links-container {
@@ -873,5 +896,10 @@ button#projectsButton div {
 
     button#projectsButton div {
         display: none;
+    }
+
+    #text {
+        align-items: center;
+        text-align: center;
     }
 }

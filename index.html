@@ -15,7 +15,8 @@
     <meta property="og:image" content="https://img.scheggia.gg/static/MCiTUJJ6TgpjqiTMdnqKf0jvxhOfbg4E.jpg">
     <meta property="og:description" content="Community Manager & Developer">
     <title>Scheggia</title>
-    <link rel="shortcut icon" href="https://cdn.scheggia.me/images/static/m8Ysl3NzOuC8ugGU4foiybUXjGs062ru.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn.scheggia.me/images/static/m8Ysl3NzOuC8ugGU4foiybUXjGs062ru.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <meta name="darkreader-lock" />
     <meta name='dmca-site-verification' content='amVQaXBxY0tUU2NIb3ZHYzR5ZG8zQT090' />
@@ -49,10 +50,10 @@
     <div id="custom-cursor"></div>
 
     <div id="scroollbar">
-        <a href="#" class="select"></a>
-        <a href="#about"></a>
-        <a href="#links"></a>
-        <a href="#projects"></a>
+        <a href="#" class="select nav-point" id="nav-/"></a>
+        <a href="#about" class="nav-point" id="nav-about"></a>
+        <a href="#links" class="nav-point" id="nav-links"></a>
+        <a href="#projects" class="nav-point" id="nav-projects"></a>
     </div>
 
     <nav class="not-scrool">
@@ -196,10 +197,19 @@
 
         <hr>
         <footer>
-            <div class="social" id="clone"></div>
-            <a href="//www.dmca.com/Protection/Status.aspx?ID=db4a7518-2794-439b-b5a9-6ef515acec5e" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-02.png?ID=db4a7518-2794-439b-b5a9-6ef515acec5e"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+            <div style="display: flex;flex-direction: column; gap: 0px;">
+                <div class="social" id="clone"></div>
+                <!-- <a href="//www.dmca.com/Protection/Status.aspx?ID=4b96f59c-ccd3-4493-9620-cb419453b1da" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-08.png?ID=4b96f59c-ccd3-4493-9620-cb419453b1da"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script> -->
+            </div>
             <div id="text">
-                Made with ❤️ by Scheggia <3 <br> Copyright © 2023, all rights reserved. </div>
+                <p>Made with ❤️ by Scheggia <3 </p>
+                <p style="font-size: 15px;">Copyright © 2023, all rights reserved.</p>
+                <div>
+                    <a href="https://www.iubenda.com/privacy-policy/10856238/legal" target="_blank">Privacy policy</a>
+                    <p> • </p>
+                    <a href="https://www.iubenda.com/privacy-policy/10856238/cookie-policy" target="_blank">Cookie Policy</a>
+                </div>
+            </div>
         </footer>
     </main>
 

@@ -139,3 +139,25 @@ async function loadData() {
 }
 
 loadData()
+
+function purgePoint() {
+    Array.from(document.getElementsByClassName("nav-point")).forEach(element => element.classList = "nav-point")
+}
+window.addEventListener('scroll', () => {
+    if (window.scrollY > document.getElementById('about').offsetTop - 200) {
+        purgePoint()
+        document.getElementById("nav-about").classList.add("select")
+    }
+    if (window.scrollY > document.getElementById('links').offsetTop - 200) {
+        purgePoint()
+        document.getElementById("nav-links").classList.add("select")
+    }
+    if (window.scrollY > document.getElementById('projects').offsetTop - 200) {
+        purgePoint()
+        document.getElementById("nav-projects").classList.add("select")
+    }
+    if (window.scrollY == 0) {
+        purgePoint()
+        document.getElementById("nav-/").classList.add("select")
+    }
+});
