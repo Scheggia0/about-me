@@ -68,7 +68,6 @@ document.addEventListener('mousemove', function (e) {
 });
 
 document.addEventListener('mousedown', function (e) {
-    document.getElementById("clickSound").play()
     if (e.button === 0) {
         customCursor.style.transform = `translate(${e.clientX - 13}px, ${e.clientY - 13}px) scale(1.5)`;
     }
