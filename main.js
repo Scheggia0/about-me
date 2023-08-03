@@ -121,7 +121,7 @@ async function loadData() {
         }
     })
 
-    await fetch(`https://api-us.scheggia.me/v1/bio/getdata`).then(r => r.json()).then(res => {
+    await fetch(`https://api.scheggia.me/v1/bio/getdata`).then(r => r.json()).then(res => {
         if (res.success == true) {
             document.getElementById('links-container').innerHTML = res.links.join('')
             document.getElementById('projects-container').innerHTML = res.projects.join('');
