@@ -280,7 +280,7 @@ main #long-desc {
     color: var(--font-color-dark);
     width: 40%;
     font-size: 20px;
-    max-width: 500px;
+    max-width: 800px;
     text-align: center;
 }
 
