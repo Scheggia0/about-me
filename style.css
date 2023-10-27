@@ -34,6 +34,7 @@ body {
     background-color: var(--bg);
     color: var(--font-color);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -269,40 +270,18 @@ main #aboutme section #container #social {
     width: 70%;
 }
 
-main #aboutme #long-desc {
+main #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #long-desc {
     color: var(--font-color-dark);
     width: 40%;
     font-size: 20px;
-}
-
-main #aboutme #discord {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-main #aboutme #discord #pfp #discord-avatar {
-    height: 130px;
-    border-radius: 20%;
-    border: solid 3px var(--presence-dnd);
-}
-
-main #aboutme #discord #pfp #discord-avatar.online {
-    border: solid 3px var(--presence-online);
-}
-
-main #aboutme #discord #pfp #discord-avatar.offline {
-    border: solid 3px var(--presence-offline);
-}
-
-main #aboutme #discord #pfp #discord-avatar.dnd {
-    border: solid 3px var(--presence-dnd);
-}
-
-main #aboutme #discord #pfp #discord-avatar.idle {
-    border: solid 3px var(--presence-idle);
+    max-width: 500px;
+    text-align: center;
 }
 
 main #aboutme #long-desc span {
@@ -710,7 +689,7 @@ button#projectsButton div {
 #links-container .link,
 #links-container-long .link {
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     background-color: var(--nav-a-hover-bg);
     border-radius: 15px;
     border: solid 1px #79737b3a;
@@ -744,8 +723,8 @@ button#projectsButton div {
 
 #links-container .link .icon,
 #links-container-long .link .icon {
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     border-radius: 10px;
     transform: translateY(0px);
     transition: 0.3s ease-in-out;
@@ -753,8 +732,8 @@ button#projectsButton div {
 
 #links-container .link .arrow,
 #links-container-long .link .arrow {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     font-size: 20px;
     transform: translateX(0px);
     transition: 0.3s ease-in-out;
@@ -770,6 +749,133 @@ button#projectsButton div {
 #links-container-long .link:hover .icon {
     transform: translateY(-5px);
     transition: 0.3s ease-in-out;
+}
+
+#contact-me {
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-me .container {
+    width: 100%;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+}
+
+#contact-me form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.group {
+    display: flex;
+    line-height: 30px;
+    align-items: center;
+    position: relative;
+    max-width: 220px;
+}
+
+.input {
+    width: 100%;
+    height: 45px;
+    line-height: 30px;
+    padding: 0 10px;
+    padding-left: 3rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--decoration-color);
+    color: #0d0c22;
+    transition: .5s ease;
+    color: var(--font-color);
+}
+
+.input::placeholder {
+    color: #94a3b8;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: rgb(47, 41, 49);
+    box-shadow: 0 0 0 5px rgb(34, 29, 36);
+}
+
+.group .icon {
+    position: absolute;
+    left: 1rem;
+    fill: none;
+    width: 1rem;
+    height: 1rem;
+}
+
+button {
+    --primary-color: var(--decoration-color);
+    --secondary-color: #fff;
+    --hover-color: var(--font-color-dark);
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+}
+
+button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+    right: 0;
 }
 
 @media screen and (max-width: 1000px) {
@@ -815,7 +921,7 @@ button#projectsButton div {
     }
 
     main #links {
-        margin: 8rem auto 0 auto !important;
+        margin: 0 auto 0 auto !important;
     }
 
     main #links #links-container {
@@ -901,5 +1007,15 @@ button#projectsButton div {
     #text {
         align-items: center;
         text-align: center;
+    }
+
+    main #long-desc {
+        width: 90%;
+        text-align: left;
+    }
+
+    main #about h1 {
+        margin-bottom: 3rem;
+        margin-top: 5rem;
     }
 }

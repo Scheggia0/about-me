@@ -1,18 +1,3 @@
-document.getElementById('timestamp').innerText = formatDate(new Date());
-setInterval(function () {
-    document.getElementById('timestamp').innerText = formatDate(new Date());
-}, 1000)
-
-function formatDate(date) {
-    var options = {
-      timeZone: "Europe/Rome",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit"
-    };
-    return date.toLocaleTimeString("en-US", options);
-}
-
 setInterval(() => {
     if (window.pageYOffset !== 0) Array.from(document.getElementsByTagName("nav"))[0].classList = "scrool"
     if (window.pageYOffset == 0) Array.from(document.getElementsByTagName("nav"))[0].classList = "not-scrool"
@@ -103,24 +88,6 @@ function hiddenLoader() {
 }
 
 async function loadData() {
-    await fetch(`https://api.lanyard.rest/v1/users/503997987425353729`).then(r => r.json()).then(res => {
-        if (res.success == true) {
-            document.getElementById('discord-avatar').src = `https://cdn.discordapp.com/avatars/503997987425353729/${res.data.discord_user.avatar}.webp`;
-
-            var status; var status_class;
-            switch (res.data.discord_status) {
-                case 'online': status = 'Online'; status_class = 'online'; break;
-                case 'idle': status = 'Idle'; status_class = 'idle'; break;
-                case 'dnd': status = 'Do not Disturb'; status_class = 'dnd'; break;
-                case 'offline': status = 'Offline'; status_class = 'offline'; break;
-                default: status = 'Error'; status_class = 'offline';
-            }
-
-            document.getElementById('discord-presence').innerText = status;
-            document.getElementById('discord-avatar').className = status_class;
-        }
-    })
-
     await fetch(`https://api.scheggia.me/v1/bio/getdata`).then(r => r.json()).then(res => {
         if (res.success == true) {
             document.getElementById('links-container').innerHTML = res.links.join('')
