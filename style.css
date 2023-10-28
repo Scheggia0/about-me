@@ -896,7 +896,6 @@ button:hover .arrow:before {
         gap: 30px;
         scroll-margin-left: 30px;
         scroll-margin-top: 7rem;
-        padding-left: 30px !important;
     }
 
     #aboutme section {
@@ -1011,7 +1010,7 @@ button:hover .arrow:before {
 
     main #long-desc {
         width: 90%;
-        text-align: left;
+        text-align: center;
     }
 
     main #about h1 {
