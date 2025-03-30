@@ -1018,3 +1018,48 @@ button:hover .arrow:before {
         margin-top: 5rem;
     }
 }
+
+#supporters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#supporter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+}
+
+#icon {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+#icon img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.donation-amount {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background-color: #c795db;
+    color: #1f1c21;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px;
+    border: 2px solid var(--bg);
+}
+
+#name {
+    margin: 0;
+    font-size: 0.9rem;
+}
